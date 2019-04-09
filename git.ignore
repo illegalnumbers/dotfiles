@@ -1,0 +1,11 @@
+.DS\_Store
+*.sw?
+.idea/*
+dump.*
+.ruby-version
+.byebug_history
+.vscode/
+.solargraph.yml
+package-lock.json
+.history/*
+.DS_Store
