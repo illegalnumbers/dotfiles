@@ -7,16 +7,16 @@ vaulted_env(){
 POWERLEVEL9K_CUSTOM_VAULTED_ENV="vaulted_env"
 
 export POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-tagname)
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs root_indicator custom_vaulted_env status)
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs root_indicator custom_vaulted_env status virtualenv)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
 # Advanced `vcs` color customization
-export POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'
-export POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
-export POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
-export POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
-export POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
-export POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
+#export POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'
+#export POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
+#export POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
+#export POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
+#export POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
+#export POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/CORP.INSTRUCTURE.COM/bcnelson/.oh-my-zsh"
@@ -143,3 +143,5 @@ export PYTHON_CONFIGURE_OPTS="--enable-shared"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+POWERLEVEL9K_COLOR_SCHEME='light'
