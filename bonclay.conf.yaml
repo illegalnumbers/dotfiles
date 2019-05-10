@@ -1,0 +1,25 @@
+# For a detailed description on the different options and how to configure them,
+# refer to the user guide: https://github.com/talal/bonclay/blob/master/doc/guide.md
+backup:
+  overwrite: true
+
+restore:
+  overwrite: false
+
+sync:
+  clean: true
+  overwrite: true
+
+spec:
+  ~/.bash_profile: .bash_profile
+  ~/.zshrc: .zshrc
+  ~/.bashrc: .bashrc
+  ~/.gitconfig: .gitconfig
+  ~/.purepower: .purepower
+  ~/.git-templates/: git-templates/
+  ~/.gitignore: .git.ignore
+  ~/powerlevel10k: powerlevel10k
+
+  # ../../examplefile: ../file
+  # ~/example dir: dir
+  # ../example dir/some other dir: ../new dir

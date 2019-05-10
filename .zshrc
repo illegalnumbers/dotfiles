@@ -120,7 +120,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-export PYENV_VERSION=3.6.6
+#export PYENV_VERSION=3.6.6
+export PYENV_VERSION=2.7.13
 # renable to remove keys from login shell
 # eval "$(ssh-agent -s)"
 source /usr/local/share/chruby/chruby.sh
@@ -134,7 +135,8 @@ fpath=(~/.zsh/completion $fpath)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+source $HOME/.vault-scripts
+source $HOME/.consul-scripts
 alias argo="java -jar ~/argouml-0.34/argouml.jar"
 export PYTHON_CONFIGURE_OPTS="--enable-shared"
 
@@ -145,3 +147,14 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 POWERLEVEL9K_COLOR_SCHEME='light'
+
+source $HOME/.ldap-scripts
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+alias get='git fetch && git checkout origin/master'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="BLACK"
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="BLACK"
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
+alias gpush='git push origin HEAD:refs/for/master'
