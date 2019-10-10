@@ -9,3 +9,5 @@ dump.*
 package-lock.json
 .history/*
 .DS_Store
+.venv/
+.venv*

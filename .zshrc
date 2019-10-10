@@ -114,14 +114,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export PATH=$PATH:/usr/local/Cellar/gnu-tar/1.30/bin/tar
-export PYENV_ROOT="/home/CORP.INSTRUCTURE.COM/bcnelson/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
-#export PYENV_VERSION=3.6.6
-export PYENV_VERSION=2.7.13
 # renable to remove keys from login shell
 # eval "$(ssh-agent -s)"
 source /usr/local/share/chruby/chruby.sh
@@ -158,3 +150,10 @@ POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="BLACK"
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
 alias gpush='git push origin HEAD:refs/for/master'
+alias beerspec='bundle exec rspec'
+alias penv='source $(pipenv --venv)/bin/activate'
+export PIPENV_VENV_IN_PROJECT=1
+eval "$(pipenv --completion)"
+alias iphonecharge='sudo usbmuxd -u -U usbmux'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
