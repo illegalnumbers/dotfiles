@@ -112,6 +112,7 @@ export GOPATH=$HOME/src/go
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export GOROOT_BOOTSTRAP=/usr/share/go-1.10
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export PATH=$PATH:/usr/local/Cellar/gnu-tar/1.30/bin/tar
 # renable to remove keys from login shell
@@ -157,3 +158,7 @@ eval "$(pipenv --completion)"
 alias iphonecharge='sudo usbmuxd -u -U usbmux'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias fixbar='killall -3 gnome-shell'
+export PATH=$PATH:/snap/bin
+
+alias changeconstancy="export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/src/constancy/bin:$PATH"
