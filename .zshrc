@@ -19,7 +19,7 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 #export POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/CORP.INSTRUCTURE.COM/bcnelson/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export DEFAULT_USER=bcnelson
+export DEFAULT_USER=bennelson
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root line)
 
@@ -119,10 +119,10 @@ export PATH=$PATH:/usr/local/Cellar/gnu-tar/1.30/bin/tar
 # eval "$(ssh-agent -s)"
 source /usr/local/share/chruby/chruby.sh
 chruby ruby
-export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/src/go/bin:$PATH
-export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/.tfenv/bin:$PATH
-alias changecg="export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/src/cloudgate/bin:$PATH"
-export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/.local/bin:$PATH
+export PATH=$HOME/src/go/bin:$PATH
+export PATH=$HOME/.tfenv/bin:$PATH
+alias changecg="export PATH=$HOME/src/cloudgate/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
 fpath=(~/.zsh/completion $fpath)
 
 export NVM_DIR="$HOME/.nvm"
@@ -161,4 +161,6 @@ alias pbpaste='xclip -selection clipboard -o'
 alias fixbar='killall -3 gnome-shell'
 export PATH=$PATH:/snap/bin
 
-alias changeconstancy="export PATH=/home/CORP.INSTRUCTURE.COM/bcnelson/src/constancy/bin:$PATH"
+alias changeconstancy="export PATH=$HOME/src/constancy/bin:$PATH"
+
+. ~/.linuxify

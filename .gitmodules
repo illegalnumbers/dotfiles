@@ -1,0 +1,6 @@
+[submodule "linuxfy"]
+	path = linuxfy
+	url = git@github.com:fabiomaia/linuxify.git
+[submodule "powerlevel10k"]
+	path = powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git

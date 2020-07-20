@@ -1,8 +1,8 @@
 
-export PATH=$PATH:/home/CORP.INSTRUCTURE.COM/bcnelson/.go/bin
+export PATH=$PATH:$HOME/.go/bin
 
-export GOPATH=/home/CORP.INSTRUCTURE.COM/bcnelson/go
+export GOPATH=$HOME/go
 
-export PATH=$PATH:/home/CORP.INSTRUCTURE.COM/bcnelson/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 export PATH="$HOME/.cargo/bin:$PATH"

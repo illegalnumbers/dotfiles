@@ -18,7 +18,7 @@ if [[ $3 != \"\" ]]; then r=\"$r --reviewer=$3\"; fi; \
 if [[ $4 != \"\" ]]; then r=\"$r --reviewer=$4\"; fi; \
 git push --receive-pack=\"gerrit receive-pack $r\" $remote HEAD:$remote_review_ref'"
 [core]
-	excludesfile = /home/CORP.INSTRUCTURE.COM/bcnelson/.gitignore
+	excludesfile = $HOME/.gitignore
 	editor = /usr/bin/vim
 [filter "lfs"]
 	clean = git-lfs clean %f

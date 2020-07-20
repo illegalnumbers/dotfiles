@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/CORP.INSTRUCTURE.COM/bcnelson/src/aws-automatic-backups/deploy/terraform/ddb'
-let g:netrw_dirhist_2='/home/CORP.INSTRUCTURE.COM/bcnelson/src/aws-automatic-backups/deploy'
-let g:netrw_dirhist_3='/home/CORP.INSTRUCTURE.COM/bcnelson/src/aws-automatic-backups/deploy/terraform'
-let g:netrw_dirhist_4='/home/CORP.INSTRUCTURE.COM/bcnelson/src/aws-automatic-backups/deploy/terraform/ddb'
+let g:netrw_dirhist_1='$HOME/src/aws-automatic-backups/deploy/terraform/ddb'
+let g:netrw_dirhist_2='$HOME/src/aws-automatic-backups/deploy'
+let g:netrw_dirhist_3='$HOME/src/aws-automatic-backups/deploy/terraform'
+let g:netrw_dirhist_4='$HOME/src/aws-automatic-backups/deploy/terraform/ddb'
