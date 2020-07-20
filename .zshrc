@@ -68,7 +68,12 @@ export DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf-zsh zsh-syntax-highlighting)
+export FZF_BASE=/usr/local/bin/fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $HOME/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+PATH="/usr/local/share/python/:$PATH"
+
+plugins=(git fzf zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,7 +109,6 @@ export DEFAULT_USER=bennelson
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root line)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias dc="docker-compose"
 
 export PATH=$PATH:/usr/local/go/bin

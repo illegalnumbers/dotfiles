@@ -1,0 +1,9 @@
+oh-my-zsh
+oh-my-zsh/powerlevel9k
+fzf-zsh
+zsh-syntax-highlighting
+chruby
+ruby-install
+pipenv
+
+mv /usr/local/opt/powerlevel9k/ /Users/bennelson/.oh-my-zsh/themes/powerlevel9k/
