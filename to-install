@@ -2,8 +2,10 @@ oh-my-zsh
 oh-my-zsh/powerlevel9k
 fzf-zsh
 zsh-syntax-highlighting
-chruby
-ruby-install
 pipenv
-
+brew install cmake
+brew install python
+sudo easy_install pip
 mv /usr/local/opt/powerlevel9k/ /Users/bennelson/.oh-my-zsh/themes/powerlevel9k/
+brew install rbenv
+rbenv install 2.7.1 --verbose

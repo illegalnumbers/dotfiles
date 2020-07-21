@@ -121,8 +121,6 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export PATH=$PATH:/usr/local/Cellar/gnu-tar/1.30/bin/tar
 # renable to remove keys from login shell
 # eval "$(ssh-agent -s)"
-source /usr/local/share/chruby/chruby.sh
-chruby ruby
 export PATH=$HOME/src/go/bin:$PATH
 export PATH=$HOME/.tfenv/bin:$PATH
 alias changecg="export PATH=$HOME/src/cloudgate/bin:$PATH"
@@ -168,3 +166,25 @@ export PATH=$PATH:/snap/bin
 alias changeconstancy="export PATH=$HOME/src/constancy/bin:$PATH"
 
 . ~/.linuxify
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+### MAC things
+# Setup Compiler paths for readline and openssl
+local READLINE_PATH=$(brew --prefix readline)
+local OPENSSL_PATH=$(brew --prefix openssl)
+export LDFLAGS="-L$READLINE_PATH/lib -L$OPENSSL_PATH/lib"
+export CPPFLAGS="-I$READLINE_PATH/include -I$OPENSSL_PATH/include"
+export PKG_CONFIG_PATH="$READLINE_PATH/lib/pkgconfig:$OPENSSL_PATH/lib/pkgconfig"
+
+# Use the OpenSSL from Homebrew instead of ruby-build
+# Note: the Homebrew version gets updated, the ruby-build version doesn't
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_PATH"
+
+# Place openssl@1.1 at the beginning of your PATH (preempt system libs)
+export PATH=$OPENSSL_PATH/bin:$PATH
+# set -x PATH /usr/local/opt/openssl/bin $PATH
+
+eval "$(rbenv init -)"
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+export PATH="$HOME/.rbenv/bin:$PATH"
